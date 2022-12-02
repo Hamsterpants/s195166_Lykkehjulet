@@ -90,7 +90,7 @@ data class GameData(
     //Disables all buttons expect new game and displays message
     private fun hasWon() {
         if (wordToDisplay.value == wordToGuess.value) {
-            info.value = "YOU GUESSED THE WORD HURRA, POINTS: ${points.value}"
+            info.value = "YOU GUESSED THE WORD HURRA, POINTS: ${points.value} \n Press New Game to play again"
             spinButtonBoolean.value = false
             guessTextFieldBoolean.value = false
             guessButtonBoolean.value = false
@@ -98,7 +98,7 @@ data class GameData(
     }
     private fun hasLost() {
         if (lives.value == 0) {
-            info.value = "YOU LOST ALL YOUR LIVES :("
+            info.value = "YOU LOST ALL YOUR LIVES :( \n Press New Game to try again"
             spinButtonBoolean.value = false
             guessTextFieldBoolean.value = false
             guessButtonBoolean.value = false
